@@ -410,7 +410,10 @@ class _QuickActionsCard extends StatelessWidget {
                 _ActionChip(
                   label: 'View Live',
                   icon: Icons.wifi_rounded,
-                  onTap: () {},
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const RealtimeScreen()),
+                  ),
                 ),
                 _ActionChip(
                   label: 'Reports',

@@ -32,4 +32,8 @@ class AppConstants {
   // Export
   static const String csvExportPrefix = 'analytics_export';
   static const String pdfExportPrefix = 'analytics_report';
+
+  // Timing
+  static const int splashDurationSeconds = 3;
+  static const int analyticsRefreshIntervalMinutes = 5;
 }

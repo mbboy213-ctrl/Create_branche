@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_constants.dart';
 import 'dashboard_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -36,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
 
     _logoController.forward().then((_) => _textController.forward());
 
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: AppConstants.splashDurationSeconds), () {
       if (mounted) {
         Navigator.of(context).pushReplacement(
           PageRouteBuilder(

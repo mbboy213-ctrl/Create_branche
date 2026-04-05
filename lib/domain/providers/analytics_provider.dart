@@ -38,7 +38,10 @@ class AnalyticsProvider extends ChangeNotifier {
 
   AnalyticsProvider() {
     _initialize();
-    _refreshTimer = Timer.periodic(const Duration(minutes: 5), (_) => _refresh());
+    _refreshTimer = Timer.periodic(
+      Duration(minutes: AppConstants.analyticsRefreshIntervalMinutes),
+      (_) => _refresh(),
+    );
   }
 
   Future<void> _initialize() async {
